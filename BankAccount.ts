@@ -34,4 +34,4 @@ myNewAccount.currentBalance();
 myNewAccount.totalTransactions(-500);
 myNewAccount.totalTransactions(750);
 console.log(myNewAccount);
-//new commit
+//new commit again!
