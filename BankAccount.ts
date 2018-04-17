@@ -14,23 +14,25 @@ class bankAccount {
         return this.balance;
     }
     
-    totalTransactions(){
+    totalTransactions(n:number){
         this.currentTransaction++;
-        this.transactions.push(this.currentTransaction); 
-        //this.balance += n; 
-        }
-    withdraw(n: number){
-        this.totalTransactions();
-        this.balance -= n; 
-    } 
-    deposit(n:number){
-        this.totalTransactions();
+        this.transactions.push(n); 
         this.balance += n; 
-    }
+        }
+    // withdraw(n: number){
+    //     this.totalTransactions();
+    //     this.balance -= n; 
+    // } 
+    // deposit(n:number){
+    //     this.totalTransactions();
+    //     this.balance += n; 
+    // }
 }
 
 let myNewAccount = new bankAccount("John Doe", 1000, [], 1); 
 myNewAccount.currentBalance();
-myNewAccount.withdraw(500);
-myNewAccount.deposit(750);
+// myNewAccount.withdraw(500);
+// myNewAccount.deposit(750);
+myNewAccount.totalTransactions(-500);
+myNewAccount.totalTransactions(750);
 console.log(myNewAccount);
