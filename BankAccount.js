@@ -14,6 +14,12 @@ var bankAccount = /** @class */ (function () {
         this.transactions.push(n);
         this.balance += n;
     };
+    bankAccount.prototype.withdraw = function (n) {
+        return this.totalTransactions(-n);
+    };
+    bankAccount.prototype.deposit = function (n) {
+        return this.totalTransactions(n);
+    };
     return bankAccount;
 }());
 var myNewAccount = new bankAccount("John Doe", 1000, [], 1);

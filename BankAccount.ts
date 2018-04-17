@@ -19,14 +19,12 @@ class bankAccount {
         this.transactions.push(n); 
         this.balance += n; 
         }
-    // withdraw(n: number){
-    //     this.totalTransactions();
-    //     this.balance -= n; 
-    // } 
-    // deposit(n:number){
-    //     this.totalTransactions();
-    //     this.balance += n; 
-    // }
+    withdraw(n: number){
+        return this.totalTransactions(-n);
+    } 
+    deposit(n:number){
+        return this.totalTransactions(n);
+    }
 }
 
 let myNewAccount = new bankAccount("John Doe", 1000, [], 1); 
